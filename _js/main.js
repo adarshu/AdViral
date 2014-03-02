@@ -30,4 +30,9 @@ $(document).ready(function () {
         });
     })
 
+    $('.add-confirm').on("click", function () {
+        $('.item3').fadeIn(2000).removeClass('hide');
+        $('#addModal').modal('hide');
+    })
+
 });

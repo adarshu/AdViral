@@ -22,8 +22,14 @@ function getAds()
 
 function genItem($i, $item)
 {
+    $show = $item->show;
+    if (!$show) {
+        $toshow = "hide";
+    }
+
     $res = "";
-    $res .= "<div class='item'>";
+    $id = $item->itemid;
+    $res .= "<div class='item $toshow item{$id}'>";
     $res .= "<div class='item-left'>";
     $url = $item->url;
     $pic = $item->thumbnail;
@@ -82,7 +88,7 @@ if (isset($_POST["action"])) {
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Title</label>
                                 <input class='form-control' placeholder=''
-                                       size='300' type='text' value='Ying Yang Chinese Food'>
+                                       size='300' type='text' value='Best Chinese Restaurant'>
                             </div>
                         </div>
                         <div class='form-row'>
@@ -123,7 +129,7 @@ if (isset($_POST["action"])) {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success sell-confirm">List Ad</button>
+                        <button type="button" class="btn btn-success add-confirm">List Ad</button>
                     </div>
                 </div>
             </div>

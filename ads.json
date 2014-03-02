@@ -1,6 +1,7 @@
 [
     {
         "itemid": "1",
+        "show": true,
         "url": "detail.php?id=1",
         "ctr": "1.3%",
         "clicks": "21462",
@@ -12,6 +13,7 @@
     },
     {
         "itemid": "2",
+        "show": true,
         "url": "detail.php?id=2",
         "ctr": "2.5%",
         "clicks": "14435",
@@ -23,6 +25,7 @@
     },
     {
         "itemid": "3",
+        "show": false,
         "url": "detail.php?id=3",
         "ctr": "4.5%",
         "clicks": "0",
