@@ -26,13 +26,13 @@ function genItem($i, $item)
     $res .= "<div class='item'>";
     $res .= "<div class='item-left'>";
     $url = $item->url;
-    $res .= "<div class='pimg'><a href='$url'><img src='/img/app_logo.png' style='height: 200px'/></a></div>";
+    $pic = $item->thumbnail;
+    $res .= "<div class='pimg'><a href='$url'><img src='$pic' class='rowimg'/></a></div>";
     $res .= "<div class='ptitle'><a href='$url'>$item->title</a></div>";
     $item->body = truncateString($item->description, 250);
     $res .= "<div class='pbody'>$item->description</div>";
     $created = date('F j, Y', $item->timecreated);
-    $stars = genStars($item->rating);
-    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>$stars</span><span class='pdownloads'>$item->clicks click</span>|<span class='pdate'>Updated $created</span></div>";
+    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>Click Through: $item->ctr</span><span class='pdownloads'>$item->clicks clicks</span>|<span class='pdate'>Updated $created</span></div>";
     $res .= "";
     $res .= "</div>";
     $res .= "</div>";
@@ -55,13 +55,12 @@ if (isset($_POST["action"])) {
 </head>
 
 <body>
-<div class="bg"><img src="img/bg3.png"/></div>
+<!--<div class="bg"><img src="img/bg3.png"/></div>-->
 <div class="homepage container">
     <div style="padding-top: 40px;">
         <div class="page-title" style="display: inline">My Ads</div>
         <div style="float: right; margin-top: 20px">
-            <a class='btn btn-success btn-lg sell-btn' href='#addModal' rel='' data-toggle='modal'><span
-                    class="glyphicon glyphicon-plus"></span></a>
+            <a class='btn btn-danger btn-lg sell-btn' href='#addModal' rel='' data-toggle='modal'>Add Advert</a>
         </div>
     </div>
 
@@ -82,19 +81,21 @@ if (isset($_POST["action"])) {
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Title</label>
                                 <input class='form-control title' placeholder=''
-                                       size='100' type='text' value=''>
+                                       size='300' type='text' value=''>
                             </div>
                         </div>
                         <div class='form-row'>
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Description</label>
                                 <input class='form-control description' placeholder=''
-                                       size='100' type='text' value=''>
+                                       size='300' type='text' value=''>
                             </div>
                         </div>
                         <div class='form-row'>
                             <div class='col-xs-12 form-group  required'>
-                                <input type="file" name="picture" id="picture"><br>
+                                <label class='control-label'>Picture URL</label>
+                                <input class='form-control description' placeholder=''
+                                       size='300' type='text' value=''>
                             </div>
                         </div>
                         <div class='form-row'>

@@ -1,20 +1,32 @@
 [
     {
-        "itemid": "9",
-        "rating": "3",
-        "clicks": "35",
+        "itemid": "1",
+        "url": "detail1.html",
+        "ctr": "1.3%",
+        "clicks": "243",
         "title": "Best Chow Mein in Mission Bay",
         "description": "Now 50% off",
-        "thumbnail": "",
+        "thumbnail": "/img/food2.jpg",
+        "timecreated": "1393135713"
+    },
+    {
+        "itemid": "2",
+        "url": "detail2.html",
+        "ctr": "2.5%",
+        "clicks": "632",
+        "title": "Best Noodles in SF",
+        "description": "Now 40% off",
+        "thumbnail": "/img/food1.jpg",
         "timecreated": "1393135713"
     },
     {
         "itemid": "3",
-        "rating": "3",
+        "url": "detail3.html",
+        "ctr": "4.5%",
         "clicks": "35",
-        "title": "Best Noodles in SF",
-        "description": "Now 40% off",
-        "thumbnail": "",
+        "title": "New item",
+        "description": "On Sale now",
+        "thumbnail": "/img/food3.jpg",
         "timecreated": "1393135713"
     }
 ]
