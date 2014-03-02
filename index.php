@@ -32,7 +32,7 @@ function genItem($i, $item)
     $res .= "<div class='pbody'>$item->description</div>";
     $created = date('F j, Y', $item->timecreated);
     $stars = genStars($item->rating);
-    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>$stars</span><span class='pdownloads'>$item->clicks clicks</span>|<span class='pdate'>Updated $created</span></div>";
+    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>$stars</span><span class='pdownloads'>$item->clicks click</span>|<span class='pdate'>Updated $created</span></div>";
     $res .= "";
     $res .= "</div>";
     $res .= "</div>";
