@@ -1,0 +1,295 @@
+* {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+}
+
+input, textarea {
+    -webkit-user-select: text;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+button {
+    outline: none !important;
+}
+
+/******************** mine */
+
+.bgimage {
+    opacity: 0.4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.etitle {
+    font-size: 12pt;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.edate {
+    padding-left: 20px;
+    font-size: 10pt;
+}
+
+.sell-title, .buy-title {
+    font-size: 22pt;
+    /*font-style: italic;*/
+}
+
+.bought-title, .sold-title {
+    font-size: 24pt;
+    color: green;
+    padding-top: 20px;
+}
+
+.sell-price {
+    font-size: 18pt;
+}
+
+.control-label {
+    font-weight: normal;
+}
+
+.buy-price {
+}
+
+.buy-price-look {
+    padding-left: 20px;
+    font-size: 24pt;
+    color: green;
+}
+
+.buy-btn {
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 40pt !important;
+    font-weight: 300;
+    color: #6666DD;
+}
+
+.page-title {
+    font-size: 40pt !important;
+    font-weight: 200;
+    /*float: left;*/
+}
+
+body {
+    font-family: 'Roboto', 'Lato', 'Open Sans', sans-serif;
+    margin-top: 0px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+    margin-bottom: 100px;
+}
+
+.menu-logo {
+    height: 40px;
+    max-height: 40px;
+}
+
+.footer-items span {
+    margin-right: 30px;
+}
+
+.form-search {
+    margin-top: -10px;
+}
+
+#tag {
+    padding: 10px 20px 10px 20px;
+    font-size: 20pt;
+    max-width: 500px;
+    margin: auto;
+    height: 60px;
+}
+
+.form-search .input-append .btn {
+    border-radius: 0 14px 14px 0;
+}
+
+.curvy-border-left {
+    border-radius: 30px 0px 0px 30px !important;
+}
+
+.curvy-border-right {
+    border-radius: 0px 30px 30px 0px !important;
+}
+
+.curvy-border {
+    border-radius: 30px 30px 30px 30px !important;
+}
+
+.shadow-home {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+#search-btn {
+    height: 60px;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.35);
+}
+
+footer {
+    padding: 10px 20px 50px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    /*background-color: #f5f5f5;*/
+}
+
+.page-whole {
+    min-height: 1000px;
+}
+
+.bg img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    opacity: .3;
+    text-align: center;
+    background-size: cover;
+}
+
+.btn-primary {
+    background-color: #577492;
+}
+
+/*******pages**************/
+
+.star {
+    height: 30px;
+}
+
+.star-empty {
+    height: 35px;
+    padding-bottom: 6px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item-left {
+    border: 1px solid #DDDDDD;
+    padding: 15px;
+    background: #ffffff;
+}
+
+.item-right {
+    border-right: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 15px;
+    background: #ffffff;
+    margin: auto;
+}
+
+.pprice {
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 40px;
+    /*color: green;*/
+}
+
+.ptitle {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.pbody {
+    font-size: 13pt;
+}
+
+.pdownloads {
+    font-size: 13pt;
+    padding-right: 10px;
+}
+
+.pdownloadssell {
+    font-size: 26pt;
+    color: green;
+    margin-top: 40px;
+}
+
+.tag-label a {
+    color: #ffffff;
+}
+
+.pstars {
+    margin-right: 20px;
+}
+
+.pdate {
+    font-size: 13pt;
+    padding-left: 10px;
+}
+
+.ptags {
+    float: right;
+}
+
+.ptags .label {
+    font-size: 13pt;
+    margin-right: 10px;
+}
+
+.pimg {
+    float: left;
+    margin-right: 20px;
+}
+
+.pimg img {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+/**********common**********/
+
+.hero-spacer {
+    /*margin-top: 50px;*/
+}
+
+.hero-feature {
+    margin-bottom: 30px; /* spaces out the feature boxes once they start to stack responsively */
+}
+
+.navbar-default {
+    height: 66px;
+    /*height: 95px;*/
+    /*padding-top: 15px;*/
+    margin-bottom: 0px;
+}
+
+.navbar-nav {
+    margin-left: 50px;
+}
+
+.navbar-nav li {
+    margin-left: 10px;
+}
+
+.navbar-nav li a, .navbar-nav li form {
+    line-height: 35px;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
