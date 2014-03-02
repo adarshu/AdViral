@@ -97,6 +97,9 @@ if (isset($_POST["action"])) {
                                 <label class='control-label'>Picture URL</label>
                                 <input class='form-control description' placeholder=''
                                        size='300' type='text' value='/img/food3.jpg'>
+                                <form action="" method="post" enctype="multipart/form-data" style="margin-top: 20px">
+                                    <input type="file" name="file" id="file"><br>
+                                </form>
                             </div>
                         </div>
                         <div class='form-row'>

@@ -30,8 +30,12 @@ button {
     background-repeat: no-repeat;
 }
 
+.topgraph {
+    margin-top: 40px;
+}
+
 .botgraph {
-    margin-top: 40px
+    margin-top: 40px;
 }
 
 .etitle {
@@ -189,6 +193,11 @@ footer {
 .item-left {
     border-radius: 7px;
     border: 1px solid #DDDDDD;
+    padding: 15px;
+    background: #ffffff;
+}
+
+.item2-left {
     padding: 15px;
     background: #ffffff;
 }
