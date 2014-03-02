@@ -88,12 +88,12 @@ function genItem($i, $item)
 
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Facebook
+                        <input type="checkbox" checked> Facebook
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Google
+                        <input type="checkbox" checked> Google
                     </label>
                 </div>
                 <div class="checkbox">
