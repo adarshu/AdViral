@@ -32,7 +32,8 @@ function genItem($i, $item)
     $item->body = truncateString($item->description, 250);
     $res .= "<div class='pbody'>$item->description</div>";
     $created = date('F j, Y', $item->timecreated);
-    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>Click Through: $item->ctr</span><span class='pdownloads'>$item->clicks clicks</span>|<span class='pdate'>Updated $created</span></div>";
+    $res .= "<br/><br/><div style='display: inline'><span class='pstars'>Click Through: $item->ctr</span><span class='pdownloads'>$item->clicks clicks</span>|<span class='pdate'>Started $created</span></div>";
+    $res .= "<a class='btn btn-warning btn-sm pull-right' href='#' style='margin-left: 30px;margin-top: -10px'>Stop Campaign</a>";
     $res .= "";
     $res .= "</div>";
     $res .= "</div>";
@@ -57,10 +58,10 @@ if (isset($_POST["action"])) {
 <body>
 <!--<div class="bg"><img src="img/bg3.png"/></div>-->
 <div class="homepage container">
-    <div style="padding-top: 40px;">
+    <div style="">
         <div class="page-title" style="display: inline">My Ads</div>
         <div style="float: right; margin-top: 20px">
-            <a class='btn btn-danger btn-lg sell-btn' href='#addModal' rel='' data-toggle='modal'>Add Advert</a>
+            <a class='btn btn-danger btn-lg sell-btn' href='#addModal' rel='' data-toggle='modal'>Create an Ad</a>
         </div>
     </div>
 
@@ -80,40 +81,40 @@ if (isset($_POST["action"])) {
                         <div class='form-row'>
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Title</label>
-                                <input class='form-control title' placeholder=''
-                                       size='300' type='text' value=''>
+                                <input class='form-control' placeholder=''
+                                       size='300' type='text' value='Ying Yang Chinese Food'>
                             </div>
                         </div>
                         <div class='form-row'>
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Description</label>
                                 <input class='form-control description' placeholder=''
-                                       size='300' type='text' value=''>
+                                       size='300' type='text' value='Voted the Best Chinese Restaurant in San Francisco in 2013.  25% off any entree!'>
                             </div>
                         </div>
                         <div class='form-row'>
                             <div class='col-xs-12 form-group  required'>
                                 <label class='control-label'>Picture URL</label>
                                 <input class='form-control description' placeholder=''
-                                       size='300' type='text' value=''>
+                                       size='300' type='text' value='/img/food3.jpg'>
                             </div>
                         </div>
                         <div class='form-row'>
                             <div class='col-xs-4 form-group  required'>
-                                <label class='control-label'>Price</label>
-                                <input autocomplete='off' class='form-control sell-price'
+                                <label class='control-label'>Age Range</label>
+                                <input autocomplete='off' class='form-control age-range'
                                        placeholder='' size='5' type='text'
-                                       value="">
+                                       value="13 and up">
                             </div>
                             <div class='col-xs-4 form-group  required'>
                                 <label class='control-label'>Location</label>
                                 <input class='form-control location' placeholder=''
-                                       size='5' type='text' value=''>
+                                       size='5' type='text' value='San Francisco'>
                             </div>
                             <div class='col-xs-4 form-group  required'>
                                 <label class='control-label'>Tags</label>
                                 <input class='form-control tags' placeholder=''
-                                       size='4' type='text' value=''>
+                                       size='4' type='text' value='chinese food'>
                             </div>
                         </div>
                     </div>

@@ -30,6 +30,10 @@ button {
     background-repeat: no-repeat;
 }
 
+.botgraph {
+    margin-top: 40px
+}
+
 .etitle {
     font-size: 12pt;
     font-weight: 300;

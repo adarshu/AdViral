@@ -1,7 +1,7 @@
 [
     {
         "itemid": "1",
-        "url": "detail1.html",
+        "url": "detail1.php",
         "ctr": "1.3%",
         "clicks": "21462",
         "title": "Best Chow Mein near you",
@@ -12,20 +12,20 @@
     },
     {
         "itemid": "2",
-        "url": "detail2.html",
+        "url": "detail2.php",
         "ctr": "2.5%",
         "clicks": "14435",
         "title": "Authentic Noodle Soup",
-        "description": “Best Chicken Noodle Soup in San Francisco, San Francisco.  Delivery is now 25% off”,
+        "description": "Best Chicken Noodle Soup in San Francisco, San Francisco.  Delivery is now 25% off",
         "thumbnail": "/img/food2.jpg",
         "preview": "/img/preview2.png",
         "timecreated": "1393135713"
     },
     {
         "itemid": "3",
-        "url": "detail3.html",
+        "url": "detail3.php",
         "ctr": "4.5%",
-        "clicks": “0”,
+        "clicks": "0",
         "title": "New item",
         "description": "On Sale now",
         "thumbnail": "/img/food3.jpg",
