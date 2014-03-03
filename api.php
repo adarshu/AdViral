@@ -1,7 +1,6 @@
 <?php
 include('shared.php');
 
-
 function preSetup()
 {
     header('Content-Type: application/json');
@@ -16,8 +15,12 @@ if ($action) {
     switch ($action) {
         case "added":
             $res = sendEmail($biz, $title);
+            sendSMS($biz, $title);
+            break;
     }
     echo $res;
 }
+
+
 
 ?>

@@ -39,7 +39,6 @@ function genItem($i, $item)
     return $res;
 }
 
-
 ?>
 <!DOCTYPE html>
 <html>

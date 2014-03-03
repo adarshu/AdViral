@@ -3,6 +3,7 @@ include('_common/coreutil.php');
 include('constants.php');
 require_once 'libs/unirest-php-master/lib/Unirest.php';
 require_once 'libs/sendgrid-php-master/lib/SendGrid.php';
+require_once('twilio-php/Services/Twilio.php');
 SendGrid::register_autoloader();
 Unirest::verifyPeer(false);
 
@@ -38,4 +39,26 @@ function sendEmail($biz, $title)
         setSubject("Your ad has been listed!")->
         setHtml("<div style='font-size: 18pt'><img src='http://adviral.com/img/AdVIRAL_web.png' height='50px'/><br/><br/><div>Dear $biz</div><br/>Your ad $title has been listed!<br/><br/>Thank you,<br/>" . APPNAME . "</div>");
     $sendgrid->web->send($email);
+}
+
+
+function sendSMS($biz, $title)
+{
+    $sid = "AC19d4b688c588b4a5f631976d8ac62a64"; // Your Account SID from www.twilio.com/user/account
+    $token = "6d42cd04bbbdc0dc2580b59ac99aff95"; // Your Auth Token from www.twilio.com/user/account
+
+    $client = new Services_Twilio($sid, $token);
+
+    $from = "7077854717";
+    $to = "5107478047";
+
+    $msg = "Your ad '$title' has been listed on Facebook!";
+
+    echo "Sending SMS from $from to $to ...<br/>";
+
+    $message = $client->account->messages->sendMessage(
+        $from, // From a valid Twilio number
+        $to, // Text this number
+        $msg
+    );
 }
