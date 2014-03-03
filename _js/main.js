@@ -31,7 +31,7 @@ $(document).ready(function () {
     })
 
     $('.add-confirm').on("click", function () {
-        $.get('http://adviral.localhost/api.php?a=added&b='+encodeURIComponent('Ying Yang Restaurant')+'&t=' + encodeURIComponent('Best Chinese Restaurant'), function (data) {
+        $.get('http://adviral.com/api.php?a=added&b='+encodeURIComponent('Ying Yang Restaurant')+'&t=' + encodeURIComponent('Best Chinese Restaurant'), function (data) {
 //            alert('Email sent!');
         });
         $('.item3').fadeIn(2000).removeClass('hide');
