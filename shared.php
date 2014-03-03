@@ -28,21 +28,14 @@ function getAdsApi()
     return json_decode($resp);
 }
 
-function sendEmail($type, $title)
+function sendEmail($biz, $title)
 {
     $sendgrid = new SendGrid('adarshu', 'giveshelter');
     $email = new SendGrid\Email();
 
-    if ($type == "sold") {
-        $email->addTo('adarshu@gmail.com')->
-            setFrom('support@' . APPDOMAIN)->
-            setSubject("Your note $title has been sold!")->
-            setHtml("<div style='font-size: 18pt'>Your note $title has been sold!<br/><br/>Thank you,<br/>" . APPNAME . "</div>");
-    } else if ($type == "bought") {
-        $email->addTo('adarshu@gmail.com')->
-            setFrom('support@' . APPDOMAIN)->
-            setSubject("Your purchase of $title is complete!")->
-            setHtml("<div style='font-size: 18pt'>Your purchase of $title is complete!<br/><br/>Thank you,<br/>" . APPNAME . "PaidNote</div>");
-    }
+    $email->addTo('adarshu@gmail.com')->
+        setFrom('support@' . APPDOMAIN)->
+        setSubject("Your ad has been listed!")->
+        setHtml("<div style='font-size: 18pt'><div>Dear $biz</div><br/>Your ad $title has been listed!<br/><br/>Thank you,<br/>" . APPNAME . "</div>");
     $sendgrid->web->send($email);
 }
