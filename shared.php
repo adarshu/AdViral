@@ -36,6 +36,6 @@ function sendEmail($biz, $title)
     $email->addTo('adarshu@gmail.com')->
         setFrom('support@' . APPDOMAIN)->
         setSubject("Your ad has been listed!")->
-        setHtml("<div style='font-size: 18pt'><div>Dear $biz</div><br/>Your ad $title has been listed!<br/><br/>Thank you,<br/>" . APPNAME . "</div>");
+        setHtml("<div style='font-size: 18pt'><img src='http://adviral.com/img/AdVIRAL_web.png' height='50px'/><br/><br/><div>Dear $biz</div><br/>Your ad $title has been listed!<br/><br/>Thank you,<br/>" . APPNAME . "</div>");
     $sendgrid->web->send($email);
 }
