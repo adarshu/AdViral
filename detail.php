@@ -78,7 +78,7 @@ function genItem($i, $item)
         <div class="tab-pane fade" id="tabpreview"
              style="overflow:scroll; height:400px; overflow-x: hidden; overflow-x: hidden; overflow-y: hidden">
             <div class="well-sm">
-                <img src="/img/preview<?= $id ?>.png"/>
+                <a href='http://sierrajewell.wix.com/yingyang' target="_blank"><img src="/img/preview<?= $id ?>.png"/></a>
             </div>
         </div>
         <div class="tab-pane fade" id="tabsettings"
